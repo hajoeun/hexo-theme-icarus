@@ -43,14 +43,8 @@ module.exports = function (hexo) {
                 filename = filename.endsWith('.css') && filename.indexOf('.min.') === -1 ?
                     filename.substr(0, filename.length - 4) + '.min.css' : filename;
             }
-            if (_package === 'mathjax') {
-                filename = filename.startsWith('unpacked/') ? filename.substr(9) : filename;
-            }
             if (_package === 'pace-js') {
                 _package = 'pace';
-            }
-            if (_package === 'clipboard') {
-                _package = 'clipboard.js';
             }
         }
         if (provider !== null && cdn_providers.hasOwnProperty(provider)) {

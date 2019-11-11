@@ -11,11 +11,6 @@ module.exports = {
             [doc]: 'Code highlight themes\nhttps://github.com/highlightjs/highlight.js/tree/master/src/styles',
             [defaultValue]: 'atom-one-light'
         },
-        clipboard: {
-            [type]: 'boolean',
-            [doc]: 'Show code copying button',
-            [defaultValue]: true
-        },
         fold: {
             [type]: 'string',
             [doc]: 'Default folding status of the code blocks. Can be "", "folded", "unfolded"',

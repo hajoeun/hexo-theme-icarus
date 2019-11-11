@@ -36,19 +36,6 @@
     if (typeof (IcarusThemeSettings) !== 'undefined' &&
         typeof (IcarusThemeSettings.article) !== 'undefined' &&
         typeof (IcarusThemeSettings.article.highlight) !== 'undefined') {
-        if (typeof (ClipboardJS) !== 'undefined' && IcarusThemeSettings.article.highlight.clipboard) {
-            $('figure.highlight').each(function () {
-                var id = 'code-' + Date.now() + (Math.random() * 1000 | 0);
-                var button = '<a href="javascript:;" class="copy" title="Copy" data-clipboard-target="#' + id + ' .code"><i class="fas fa-copy"></i></a>';
-                $(this).attr('id', id);
-                if ($(this).find('figcaption').length) {
-                    $(this).find('figcaption').prepend(button);
-                } else {
-                    $(this).prepend('<figcaption>' + button + '</figcaption>');
-                }
-            });
-            new ClipboardJS('.highlight .copy');
-        }
         var fold = IcarusThemeSettings.article.highlight.fold;
         if (fold.trim()) {
             var button = '<span class="fold">' + (fold === 'unfolded' ? '<i class="fas fa-angle-down"></i>' : '<i class="fas fa-angle-right"></i>') + '</span>';

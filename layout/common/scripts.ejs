@@ -6,16 +6,11 @@
 var IcarusThemeSettings = {
     article: {
         highlight: {
-            clipboard: <%= get_config('article.highlight.clipboard', true) %>,
             fold: '<%= get_config('article.highlight.fold', true) %>'
         }
     }
 };
 </script>
-
-<% if (get_config('article.highlight.clipboard')) { %>
-    <%- _js(cdn('clipboard', '2.0.4', 'dist/clipboard.min.js'), true) %>
-<% } %>
 
 <% if (has_config('plugins')) { %>
     <% for (let plugin in get_config('plugins')) { %>

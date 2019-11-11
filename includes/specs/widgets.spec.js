@@ -24,10 +24,6 @@ const DEFAULT_WIDGETS = [
                 icon: 'fab fa-twitter',
                 url: 'https://twitter.com'
             },
-            Dribbble: {
-                icon: 'fab fa-dribbble',
-                url: 'https://dribbble.com'
-            },
             RSS: {
                 icon: 'fas fa-rss',
                 url: '/'
